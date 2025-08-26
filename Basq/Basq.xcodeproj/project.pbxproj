@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		A01425992E5D447E005E60E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A01425832E5D447D005E60E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A014258A2E5D447D005E60E2;
+			remoteInfo = Basq;
+		};
+		A01425A32E5D447E005E60E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A01425832E5D447D005E60E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A014258A2E5D447D005E60E2;
+			remoteInfo = Basq;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A014258B2E5D447D005E60E2 /* Basq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basq.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01425982E5D447E005E60E2 /* BasqTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasqTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01425A22E5D447E005E60E2 /* BasqUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasqUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A014258D2E5D447D005E60E2 /* Basq */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Basq;
+			sourceTree = "<group>";
+		};
+		A014259B2E5D447E005E60E2 /* BasqTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BasqTests;
+			sourceTree = "<group>";
+		};
+		A01425A52E5D447E005E60E2 /* BasqUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BasqUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A01425882E5D447D005E60E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A01425952E5D447E005E60E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A014259F2E5D447E005E60E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A01425822E5D447D005E60E2 = {
+			isa = PBXGroup;
+			children = (
+				A014258D2E5D447D005E60E2 /* Basq */,
+				A014259B2E5D447E005E60E2 /* BasqTests */,
+				A01425A52E5D447E005E60E2 /* BasqUITests */,
+				A014258C2E5D447D005E60E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A014258C2E5D447D005E60E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A014258B2E5D447D005E60E2 /* Basq.app */,
+				A01425982E5D447E005E60E2 /* BasqTests.xctest */,
+				A01425A22E5D447E005E60E2 /* BasqUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A014258A2E5D447D005E60E2 /* Basq */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A01425AC2E5D447E005E60E2 /* Build configuration list for PBXNativeTarget "Basq" */;
+			buildPhases = (
+				A01425872E5D447D005E60E2 /* Sources */,
+				A01425882E5D447D005E60E2 /* Frameworks */,
+				A01425892E5D447D005E60E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A014258D2E5D447D005E60E2 /* Basq */,
+			);
+			name = Basq;
+			packageProductDependencies = (
+			);
+			productName = Basq;
+			productReference = A014258B2E5D447D005E60E2 /* Basq.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A01425972E5D447E005E60E2 /* BasqTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A01425AF2E5D447E005E60E2 /* Build configuration list for PBXNativeTarget "BasqTests" */;
+			buildPhases = (
+				A01425942E5D447E005E60E2 /* Sources */,
+				A01425952E5D447E005E60E2 /* Frameworks */,
+				A01425962E5D447E005E60E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A014259A2E5D447E005E60E2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A014259B2E5D447E005E60E2 /* BasqTests */,
+			);
+			name = BasqTests;
+			packageProductDependencies = (
+			);
+			productName = BasqTests;
+			productReference = A01425982E5D447E005E60E2 /* BasqTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A01425A12E5D447E005E60E2 /* BasqUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A01425B22E5D447E005E60E2 /* Build configuration list for PBXNativeTarget "BasqUITests" */;
+			buildPhases = (
+				A014259E2E5D447E005E60E2 /* Sources */,
+				A014259F2E5D447E005E60E2 /* Frameworks */,
+				A01425A02E5D447E005E60E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A01425A42E5D447E005E60E2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A01425A52E5D447E005E60E2 /* BasqUITests */,
+			);
+			name = BasqUITests;
+			packageProductDependencies = (
+			);
+			productName = BasqUITests;
+			productReference = A01425A22E5D447E005E60E2 /* BasqUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A01425832E5D447D005E60E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					A014258A2E5D447D005E60E2 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					A01425972E5D447E005E60E2 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = A014258A2E5D447D005E60E2;
+					};
+					A01425A12E5D447E005E60E2 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = A014258A2E5D447D005E60E2;
+					};
+				};
+			};
+			buildConfigurationList = A01425862E5D447D005E60E2 /* Build configuration list for PBXProject "Basq" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A01425822E5D447D005E60E2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A014258C2E5D447D005E60E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A014258A2E5D447D005E60E2 /* Basq */,
+				A01425972E5D447E005E60E2 /* BasqTests */,
+				A01425A12E5D447E005E60E2 /* BasqUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A01425892E5D447D005E60E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A01425962E5D447E005E60E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A01425A02E5D447E005E60E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A01425872E5D447D005E60E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A01425942E5D447E005E60E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A014259E2E5D447E005E60E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A014259A2E5D447E005E60E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A014258A2E5D447D005E60E2 /* Basq */;
+			targetProxy = A01425992E5D447E005E60E2 /* PBXContainerItemProxy */;
+		};
+		A01425A42E5D447E005E60E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A014258A2E5D447D005E60E2 /* Basq */;
+			targetProxy = A01425A32E5D447E005E60E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A01425AA2E5D447E005E60E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = KAJSQ5ZH42;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 18.4;
+			};
+			name = Debug;
+		};
+		A01425AB2E5D447E005E60E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KAJSQ5ZH42;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				TVOS_DEPLOYMENT_TARGET = 18.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A01425AD2E5D447E005E60E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KAJSQ5ZH42;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paynebrain.Basq;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		A01425AE2E5D447E005E60E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KAJSQ5ZH42;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paynebrain.Basq;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		A01425B02E5D447E005E60E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KAJSQ5ZH42;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paynebrain.BasqTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basq.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Basq";
+				TVOS_DEPLOYMENT_TARGET = 18.4;
+			};
+			name = Debug;
+		};
+		A01425B12E5D447E005E60E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KAJSQ5ZH42;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paynebrain.BasqTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basq.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Basq";
+				TVOS_DEPLOYMENT_TARGET = 18.4;
+			};
+			name = Release;
+		};
+		A01425B32E5D447E005E60E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KAJSQ5ZH42;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paynebrain.BasqUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = Basq;
+			};
+			name = Debug;
+		};
+		A01425B42E5D447E005E60E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KAJSQ5ZH42;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paynebrain.BasqUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = Basq;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A01425862E5D447D005E60E2 /* Build configuration list for PBXProject "Basq" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01425AA2E5D447E005E60E2 /* Debug */,
+				A01425AB2E5D447E005E60E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A01425AC2E5D447E005E60E2 /* Build configuration list for PBXNativeTarget "Basq" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01425AD2E5D447E005E60E2 /* Debug */,
+				A01425AE2E5D447E005E60E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A01425AF2E5D447E005E60E2 /* Build configuration list for PBXNativeTarget "BasqTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01425B02E5D447E005E60E2 /* Debug */,
+				A01425B12E5D447E005E60E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A01425B22E5D447E005E60E2 /* Build configuration list for PBXNativeTarget "BasqUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01425B32E5D447E005E60E2 /* Debug */,
+				A01425B42E5D447E005E60E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A01425832E5D447D005E60E2 /* Project object */;
+}
