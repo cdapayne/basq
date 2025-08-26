@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 /// Root view for the tvOS application. Displays a remote image whose
 /// filename increments every minute and optionally shows a clock in the
@@ -78,6 +79,12 @@ struct ContentView: View {
             }
         }
         .edgesIgnoringSafeArea(.all)
+        .onAppear {
+            UIApplication.shared.isIdleTimerDisabled = true
+        }
+        .onDisappear {
+            UIApplication.shared.isIdleTimerDisabled = false
+        }
     }
 
     /// Constructs the full URL for the current image number.
