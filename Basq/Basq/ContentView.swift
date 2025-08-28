@@ -15,6 +15,14 @@ struct ContentView: View {
     // Track button visibility
     @State private var showButton: Bool = true
 
+    // Weather and settings
+    @AppStorage("zipCode") private var zipCode: String = ""
+    @State private var weather: Weather?
+    @State private var showSettings: Bool = false
+
+    // Magic Kingdom hours
+    @State private var magicHours: String = "Loading hours..."
+
     private let minuteTimer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
     private let clockTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
@@ -55,7 +63,29 @@ struct ContentView: View {
                     .animation(.easeInOut(duration: 1), value: showButton)
 
                     Spacer()
+
+                    if let weather {
+                        VStack(alignment: .trailing) {
+                            Text("Temp: \(Int(weather.temperature))°F")
+                            Text("Humidity: \(Int(weather.humidity))%")
+                        }
+                        .font(.caption)
+                        .padding(8)
+                        .background(Color.black.opacity(0.7))
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                    }
                 }
+
+                Spacer()
+
+                // Center magic hours
+                Text(magicHours)
+                    .font(.headline)
+                    .padding()
+                    .background(Color.black.opacity(0.7))
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
 
                 Spacer()
 
@@ -68,9 +98,11 @@ struct ContentView: View {
                             .background(Color.black.opacity(0.7))
                             .foregroundColor(.white)
                             .cornerRadius(8)
+                    }
 
-                        Spacer()
+                    Spacer()
 
+                    if showClock {
                         // Bottom-right clock
                         Text(timeString)
                             .font(.title2)
@@ -82,11 +114,33 @@ struct ContentView: View {
                                 currentDate = date
                             }
                     }
+
+                    Button(action: {
+                        showSettings = true
+                        resetButtonFade()
+                    }) {
+                        Image(systemName: "gearshape.fill")
+                            .padding()
+                            .background(Color.black.opacity(0.7))
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    }
+                    .opacity(showButton ? 1 : 0.01)
+                    .animation(.easeInOut(duration: 1), value: showButton)
+                    .sheet(isPresented: $showSettings) {
+                        SettingsView(zipCode: $zipCode) {
+                            Task { await loadWeather() }
+                        }
+                    }
                 }
                 .padding()
             }
         }
         .edgesIgnoringSafeArea(.all)
+        .task {
+            await loadWeather()
+            await loadMagicHours()
+        }
         .onAppear {
             UIApplication.shared.isIdleTimerDisabled = true
             resetButtonFade()
@@ -120,6 +174,27 @@ struct ContentView: View {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         return formatter.string(from: currentDate)
+    }
+
+    // MARK: - Data Loading
+    @MainActor
+    private func loadWeather() async {
+        guard !zipCode.isEmpty else { return }
+        do {
+            weather = try await WeatherService().fetchWeather(zipCode: zipCode)
+        } catch {
+            weather = nil
+        }
+    }
+
+    @MainActor
+    private func loadMagicHours() async {
+        do {
+            let hours = try await MagicHoursService().fetchTodayHours()
+            magicHours = "Magic Kingdom: \(hours.openingTime) - \(hours.closingTime)"
+        } catch {
+            magicHours = "Magic Kingdom hours unavailable"
+        }
     }
 }
 
