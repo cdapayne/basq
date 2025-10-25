@@ -1,4 +1,3 @@
-//
 //  ContentView.swift
 //  Basq
 //
@@ -6,24 +5,17 @@
 //
 
 import SwiftUI
+import UIKit
 
-/// Root view for the tvOS application. Displays a remote image whose
-/// filename increments every minute and optionally shows a clock in the
-/// bottom-right corner.
 struct ContentView: View {
-    /// Starting index for the image name.
     @State private var currentImageNumber: Int = 3189
-
-    /// Controls whether the clock is visible.
     @State private var showClock: Bool = false
-
-    /// The current date used for the clock display.
     @State private var currentDate: Date = Date()
 
-    /// A timer that fires every minute to update the image.
-    private let minuteTimer = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
+    // Track button visibility
+    @State private var showButton: Bool = true
 
-    /// A timer that fires every second to update the clock text.
+    private let minuteTimer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
     private let clockTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var body: some View {
@@ -37,11 +29,13 @@ struct ContentView: View {
                     image
                         .resizable()
                         .scaledToFit()
+                        .overlay(Color.black.opacity(0.4)) // <-- dims image ~80%
                 case .failure:
                     Image(systemName: "xmark.octagon")
                         .resizable()
                         .scaledToFit()
                         .foregroundColor(.gray)
+                        .overlay(Color.black.opacity(0.8))
                 @unknown default:
                     EmptyView()
                 }
@@ -50,19 +44,34 @@ struct ContentView: View {
                 currentImageNumber += 1
             }
 
-            // Overlay containing the toggle button and optional clock.
             VStack {
                 HStack {
                     Button(showClock ? "Hide Clock" : "Show Clock") {
                         showClock.toggle()
+                        resetButtonFade()
                     }
                     .padding()
+                    .opacity(showButton ? 1 : 0.01) // dim after timeout
+                    .animation(.easeInOut(duration: 1), value: showButton)
+
                     Spacer()
                 }
+
                 Spacer()
-                if showClock {
-                    HStack {
+
+                HStack {
+                    // Bottom-left date
+                    if showClock {
+                        Text(dateString)
+                            .font(.caption)
+                            .padding(8)
+                            .background(Color.black.opacity(0.7))
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+
                         Spacer()
+
+                        // Bottom-right clock
                         Text(timeString)
                             .font(.title2)
                             .padding()
@@ -73,22 +82,43 @@ struct ContentView: View {
                                 currentDate = date
                             }
                     }
-                    .padding()
                 }
+                .padding()
             }
         }
         .edgesIgnoringSafeArea(.all)
+        .onAppear {
+            UIApplication.shared.isIdleTimerDisabled = true
+            resetButtonFade()
+        }
+        .onDisappear {
+            UIApplication.shared.isIdleTimerDisabled = false
+        }
     }
 
-    /// Constructs the full URL for the current image number.
+    // MARK: - Helpers
+    private func resetButtonFade() {
+        showButton = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            withAnimation {
+                showButton = false
+            }
+        }
+    }
+
     private var imageURL: URL? {
         URL(string: "https://www.paynebrain.com/art/IMG_\(currentImageNumber).JPG")
     }
 
-    /// Formats the current date into a human-readable time string.
     private var timeString: String {
         let formatter = DateFormatter()
         formatter.timeStyle = .medium
+        return formatter.string(from: currentDate)
+    }
+
+    private var dateString: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
         return formatter.string(from: currentDate)
     }
 }
